@@ -19,3 +19,6 @@ $ sudo ./go_start.sh
 
 ### Optional:
 * You can uncomment the bottom portion of the script to have the setup script install the vim-go plugin for VIM
+
+#### New to Come:
+* Script will check the enviroment to see if GO is already installed and, if so, check the verison and do an update if necessary.
