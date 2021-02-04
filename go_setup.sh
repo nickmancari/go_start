@@ -18,13 +18,6 @@ whoami | grep 'root' &> /dev/null
 		:
 	fi 
 	
-find $PWD/Go/go_setup.sh &> /dev/null
-	if [[ $? == 0 ]]; then
-		GPATH="$PWD/Go"
-	else
-		GPATH="$PWD"
-	fi
-	
 wget -q --spider google.com
 	if [[ $? != 0 ]] ; then
 		echo -e "${RED}Error${NC}: wget not installed" && return 1
@@ -49,8 +42,8 @@ echo -e "${PUSH}${BLUE}You just downloaded ${GODOWNLOAD}${NC}"
 sudo tar -C /usr/local -xzf ~/${GODOWNLOAD} &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 go get github.com/fatih/color &&
-go run ${GPATH}/test_go.go
-rm -rf ${GPATH}/tmp_file
+go run $PWD/test_go.go
+rm -rf $PWD/tmp_file
 # <-------Need further testing for items below this----->
 
 # echo "Setting up VIM plugin"
