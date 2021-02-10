@@ -6,7 +6,7 @@ function check() {
 	if [[ $VERSION < 16 ]]; then
 		echo -e "Your Version of Go is old" >&2
 	else
-		echo -e "Your version is fine" >&2
+		echo -e "Your version is up to date" >&2
 	fi
 }
 
