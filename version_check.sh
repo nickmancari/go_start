@@ -16,3 +16,5 @@ if [[ $? == 1 ]]; then
 else
 	$(check)
 fi
+
+rm -rf $PWD/tmp_file

@@ -24,6 +24,9 @@ wget -q --spider google.com
 	else 
 		:
 	fi
+
+$PWD/version_check.sh
+
 #----Done Enviroment Check
 #
 #---Check for latest version of GO
