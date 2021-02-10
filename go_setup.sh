@@ -25,7 +25,6 @@ wget -q --spider google.com
 		:
 	fi
 
-$PWD/version_check.sh
 
 #----Done Enviroment Check
 #
@@ -46,7 +45,12 @@ sudo tar -C /usr/local -xzf ~/${GODOWNLOAD} &&
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
 go get github.com/fatih/color &&
 go run $PWD/test_go.go
+#
+#----Clean up------
+#
 rm -rf $PWD/tmp_file
+rm -rf ~/${GODOWNLOAD}
+#
 # <-------Need further testing for items below this----->
 
 # echo "Setting up VIM plugin"
