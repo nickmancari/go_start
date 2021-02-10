@@ -3,7 +3,7 @@
 VERSION=$(go version | grep 'go1' > tmp_file && cut -b 16-17 tmp_file)
 
 function check() {
-	if [[ $VERSION < 16 ]]; then
+	if [[ $VERSION < 15 ]]; then
 		echo -e "Your Version of Go is old" >&2
 	else
 		echo -e "Your version is up to date" >&2
