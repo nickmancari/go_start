@@ -18,7 +18,5 @@ go version &> /dev/null
 if [[ $? == 1 ]]; then
 	echo -e "GO is not installed" && return
 else
-	$(check)
+	$(check) && rm -rf check_tmp_file
 fi
-
-rm -rf $PWD/check_tmp_file

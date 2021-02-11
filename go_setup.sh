@@ -42,7 +42,7 @@ GODOWNLOAD=$(echo -e $(scrape) | cut -c 5-)
 wget https://golang.org/dl/${GODOWNLOAD} -P ~/ &&
 echo -e "${PUSH}${BLUE}You just downloaded ${GODOWNLOAD}${NC}"
 sudo tar -C /usr/local -xzf ~/${GODOWNLOAD} &&
-echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && source /etc/profile &&
+echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile && . /etc/profile &&
 go get github.com/fatih/color &&
 go run $PWD/test_go.go
 #
