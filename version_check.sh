@@ -1,9 +1,9 @@
 #!/bin/bash
 
-VERSION=$(go version | grep 'go1' > tmp_file && cut -b 16-17 tmp_file)
+VERSION=$(go version | grep 'go1' > tmp_file1 && cut -b 16-17 tmp_file1)
 
 function update() {
-	
+	sudo rm -rvf /usr/local/go && $PWD/go_setup.sh	
 }
 
 function check() {
@@ -21,4 +21,4 @@ else
 	$(check)
 fi
 
-rm -rf $PWD/tmp_file
+rm -rf $PWD/tmp_file1
