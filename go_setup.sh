@@ -13,18 +13,24 @@ PUSH="                         "
 
 whoami | grep 'root' &> /dev/null
 	if [[ $? != 0 ]]; then
-		echo -e "${RED}Error${NC}: root required" && return
+		echo -e "${RED}Error${NC}: root required" && return 1
 	else 
 		:
 	fi 
 	
 wget -q --spider google.com
 	if [[ $? != 0 ]] ; then
-		echo -e "${RED}Error${NC}: wget not installed" && return
+		echo -e "${RED}Error${NC}: wget not installed" && return 1
 	else 
 		:
 	fi
 
+find /usr/local/go &> /dev/null
+	if [[ $? == 0 ]]; then
+		echo -e "${RED}Error${NC}: go is already installed. Run version check instead." && exit 1
+	else
+		:
+	fi
 
 #----Done Enviroment Check
 #
