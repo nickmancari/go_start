@@ -11,12 +11,12 @@ PUSH="                         "
 #
 #----Check Enviroment----
 
-whoami | grep 'root' &> /dev/null
-	if [[ $? != 0 ]]; then
-		echo -e "${RED}Error${NC}: root required" && return 1
-	else 
-		:
-	fi 
+#whoami | grep 'root' &> /dev/null
+#	if [[ $? != 0 ]]; then
+#		echo -e "${RED}Error${NC}: root required" && return 1
+#	else 
+#		:
+#	fi 
 	
 wget -q --spider google.com
 	if [[ $? != 0 ]] ; then
@@ -27,7 +27,7 @@ wget -q --spider google.com
 
 find /usr/local/go &> /dev/null
 	if [[ $? == 0 ]]; then
-		echo -e "${RED}Error${NC}: go is already installed. Run version check instead." && exit 1
+		echo -e "${RED}Error${NC}: go is already installed. Run version check instead." && return 1
 	else
 		:
 	fi
