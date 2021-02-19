@@ -3,7 +3,7 @@
 VERSION=$(go version | grep 'go1' > check_tmp_file && cut -b 16-17 check_tmp_file)
 
 function update() {
-	sudo rm -rvf /usr/local/go && $PWD/go_setup.sh	
+	rm -rvf /usr/local/go && $PWD/go_setup.sh	
 }
 
 function check() {
