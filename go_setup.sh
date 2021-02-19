@@ -11,6 +11,8 @@ PUSH="                         "
 #
 #----Check Enviroment----
 
+# testing sudo requirement 
+# may not be needed in new script versions
 #whoami | grep 'root' &> /dev/null
 #	if [[ $? != 0 ]]; then
 #		echo -e "${RED}Error${NC}: root required" && return 1
