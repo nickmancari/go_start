@@ -22,3 +22,4 @@ $ sudo ./go_start.sh
 
 #### New to Come:
 * Script will check the enviroment to see if GO is already installed and, if so, check the verison and do an update if necessary.
+* Version check will automatically get the latest version number and compare with version variable
