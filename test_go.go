@@ -1,13 +1,12 @@
 package main
 
 import (
-	
-	
-	"github.com/fatih/color"
+	"fmt"
 )
 
-
+const blue = "\033[36m"
+const reset = "\033[0m"
 
 func main() {
-	color.Cyan("\n                                 ((((((((Go is now installed))))))))")
+	fmt.Println("\n\t\t\t\t"+blue+"Go is now installed"+reset+"\n")
 }
